@@ -34,4 +34,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    //tool recyleview
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //tool conectNetwork
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+    //tool showpicture
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
 }
