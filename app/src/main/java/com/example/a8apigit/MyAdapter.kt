@@ -19,13 +19,14 @@ class MyAdapter (private val dataList:MutableList<Data>) : RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
         val data = dataList[position]
-
+        //ดรียกข้อมูล
         val userFullNameTextView = holder.itemView.user_full_name
         val userAvatarImageView = holder.itemView.user_avatar
 
         val fullName = "${data.firstName} ${data.lastName}"
         userFullNameTextView.text = fullName
 
+        //ตัวเรียกใช้รูป
         Picasso.get()
             .load(data.avatar)
             .into(userAvatarImageView)

@@ -20,9 +20,13 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
         myadapter = MyAdapter(dataList)
-        my_recycler_view.layoutManager= LinearLayoutManager(this)
-        my_recycler_view.addItemDecoration(DividerItemDecoration(this, OrientationHelper.VERTICAL))
-        my_recycler_view.adapter = myadapter
+
+        //setup recycler view
+        my_recycler_view.layoutManager= LinearLayoutManager(this) //กำหนดให้หมุดตามลักษณะหน้าจอ
+        my_recycler_view.addItemDecoration(DividerItemDecoration(this, OrientationHelper.VERTICAL)) //สร้างเส้นแบ่งระหว่าง recycler view
+        my_recycler_view.adapter = myadapter //เรียก adapter
+
+        //setup android network
         AndroidNetworking.initialize(this)
 
         AndroidNetworking.get("https://reqres.in/api/users?page=2")
@@ -34,8 +38,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onError(anError: ANError?) {
-                    TODO("Not yet implemented")
                 }
+
 
             })
     }
